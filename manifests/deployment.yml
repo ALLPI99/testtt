@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: allpitesttt 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: allpitesttt
+  template:
+    metadata:
+      labels:
+        app: allpitesttt 
+    spec:
+      containers:
+        - name: allpitesttt 
+          image: jieuntest.azurecr.io/allpitesttt
+          ports:
+          - containerPort: 8000
